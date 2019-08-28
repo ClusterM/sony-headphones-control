@@ -91,9 +91,9 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
                 if (intent != null)
                     TaskerPlugin.Setting.signalFinish(context, intent, TaskerPlugin.Setting.RESULT_CODE_OK, null);
                 else
-                    Toast.makeText(context, "OK", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.ok), Toast.LENGTH_SHORT).show();
             } else {
-                final String message = "Sony Headset is not found";
+                final String message = context.getString(R.string.headset_not_found);
                 if (intent != null) {
                     Bundle vars = new Bundle();
                     vars.putString(TaskerPlugin.Setting.VARNAME_ERROR_MESSAGE, message);
@@ -104,7 +104,7 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            final String message = "IO error (another application using a headset?)";
+            final String message = context.getString(R.string.io_error);
             if (intent != null) {
                 Bundle vars = new Bundle();
                 vars.putString(TaskerPlugin.Setting.VARNAME_ERROR_MESSAGE, message);
@@ -139,17 +139,17 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
                 break;
         }
         if (headset == null) {
-            Log.e(TAG, "Headset not found");
+//            Log.e(TAG, "Headset not found");
             return false;
         } else {
-            Log.d(TAG, "Headset found: " + headset.getAddress() + " " + headset.getName());
+//            Log.d(TAG, "Headset found: " + headset.getAddress() + " " + headset.getName());
         }
 
         BluetoothSocket socket = headset.createRfcommSocketToServiceRecord(uuid);
         try {
-            Log.i(TAG, "Socket connected: " + socket.isConnected());
+//            Log.i(TAG, "Socket connected: " + socket.isConnected());
             socket.connect();
-            Log.i(TAG, "Socket connected: " + socket.isConnected());
+//            Log.i(TAG, "Socket connected: " + socket.isConnected());
 
             byte[] packet = new byte[data.length + 2];
             packet[0] = 0x0c;
@@ -190,7 +190,7 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
                 for (int j = 0; j < r; j++) {
                     sb.append(String.format(" %02x", buffer[j]));
                 }
-                Log.i(TAG, "Read: " + r + " bytes:" + sb);
+//                Log.i(TAG, "Read: " + r + " bytes:" + sb);
                 break;
             }
             Thread.sleep(50);

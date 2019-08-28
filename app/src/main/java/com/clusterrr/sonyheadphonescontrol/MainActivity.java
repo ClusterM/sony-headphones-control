@@ -61,6 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((Button) findViewById(R.id.buttonTest)).setOnClickListener(this);
         ((Button) findViewById(R.id.buttonSave)).setOnClickListener(this);
 
+        if (getCallingActivity() == null) // standalone mode
+        {
+            ((Button) findViewById(R.id.buttonTest)).setText(R.string.apply);
+            ((Button) findViewById(R.id.buttonSave)).setVisibility(View.GONE);
+        }
+
         saveSettings();
     }
 
