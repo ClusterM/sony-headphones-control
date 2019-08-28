@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int volume = bundle.getInt(TaskerFireReceiver.EXTRA_STRING_VOLUME, 20);
                     boolean voice = bundle.getBoolean(TaskerFireReceiver.EXTRA_STRING_VOICE, false);
                     ((RadioButton) findViewById(R.id.radioButtonAmbientSound)).setChecked(true);
-                    ((SeekBar) findViewById(R.id.seekBarVolume)).setProgress(volume);
+                    ((SeekBar) findViewById(R.id.seekBarVolume)).setProgress(volume - 1);
                     ((Switch) findViewById(R.id.switchVoiceOptimized)).setChecked(voice);
             }
         }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             blurb = ((RadioButton) findViewById(R.id.radioButtonWindCancelling)).getText().toString();
         } else if (((RadioButton) findViewById(R.id.radioButtonAmbientSound)).isChecked()) {
             mode = 3;
-            volume = ((SeekBar) findViewById(R.id.seekBarVolume)).getProgress();
+            volume = ((SeekBar) findViewById(R.id.seekBarVolume)).getProgress() + 1;
             voice = ((Switch) findViewById(R.id.switchVoiceOptimized)).isChecked();
             blurb = ((RadioButton) findViewById(R.id.radioButtonAmbientSound)).getText().toString() +
                     ", volume=" + volume + (voice ? ", voice optimized" : "");

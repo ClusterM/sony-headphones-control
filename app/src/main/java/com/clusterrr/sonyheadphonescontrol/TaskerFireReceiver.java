@@ -40,6 +40,7 @@ import java.util.concurrent.ExecutionException;
 public final class TaskerFireReceiver extends BroadcastReceiver {
     public static final String TAG = "SonyHeadphonesControl";
     public static final UUID uuid = UUID.fromString("96cc203e-5068-46ad-b32d-e316f5e069ba");
+    public static final UUID uuid_alt = UUID.fromString("ba69e0f5-16e3-2db3-ad46-68503e20cc96");
     public static final String ACTION_FIRE_SETTING = "com.twofortyfouram.locale.intent.action.FIRE_SETTING"; //$NON-NLS-1$
     public static final String EXTRA_BUNDLE = "com.twofortyfouram.locale.intent.extra.BUNDLE"; //$NON-NLS-1$
     public static final String EXTRA_STRING_BLURB = "com.twofortyfouram.locale.intent.extra.BLURB"; //$NON-NLS-1$
@@ -130,7 +131,7 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
         for (BluetoothDevice device : devices) {
             ParcelUuid[] uuids = device.getUuids();
             for (ParcelUuid u : uuids) {
-                if (u.toString().equals(uuid.toString())) {
+                if (u.toString().equals(uuid.toString()) || u.toString().equals(uuid_alt.toString())) {
                     headset = device;
                     break;
                 }
