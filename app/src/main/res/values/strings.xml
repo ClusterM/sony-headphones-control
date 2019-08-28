@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sony Headphones Control</string>
+    <string name="disable_ambient_sound_control">Disable ambient sound control</string>
+    <string name="enable_noise_cancelling">Enable noise cancelling</string>
+    <string name="enable_wind_cancelling">Enable wind cancelling</string>
+    <string name="ambient_sound">Ambient sound</string>
+    <string name="volume">Volume:</string>
+    <string name="voice_optimized">Voice optimized</string>
+    <string name="test">Test</string>
+    <string name="save">Save</string>
+</resources>
