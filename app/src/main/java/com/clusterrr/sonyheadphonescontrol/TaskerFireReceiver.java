@@ -129,6 +129,10 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
         Set<BluetoothDevice> devices = adapter.getBondedDevices();
         for (BluetoothDevice device : devices) {
             ParcelUuid[] uuids = device.getUuids();
+
+            if(uuids == null)
+                continue;
+
             for (ParcelUuid u : uuids) {
                 if (u.toString().equals(uuid.toString())) {
                     headset = device;
