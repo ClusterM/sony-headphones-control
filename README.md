@@ -16,4 +16,8 @@ Supported headphones:
 
 ![](screenshots/main.jpg =100x20)
 
-![](screenshots/tasker.jpg =100x20)
+![](./screenshots/tasker.jpg =100x20)
+
+<img src="./screenshots/main.jpg" alt="main" width="200"/>
+
+
