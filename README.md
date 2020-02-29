@@ -14,6 +14,9 @@ Supported headphones:
 
 ## Some screenshots
 
-![Settings](screenshots/main.jpg)
+<div>
+<img src="./screenshots/main.jpg" alt="main" width="405"/>
+<img src="./screenshots/tasker.jpg" alt="main" width="405"/>
+</div>
 
-![Settings](screenshots/tasker.jpg)
+
