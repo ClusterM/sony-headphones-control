@@ -14,10 +14,9 @@ Supported headphones:
 
 ## Some screenshots
 
-![](screenshots/main.jpg =100x20)
 
-![](./screenshots/tasker.jpg =100x20)
+<img src="./screenshots/main.jpg" alt="main" width="400"/>
+<img src="./screenshots/tasker.jpg" alt="main" width="400"/>
 
-<img src="./screenshots/main.jpg" alt="main" width="200"/>
 
 
