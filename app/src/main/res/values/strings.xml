@@ -10,6 +10,9 @@
     <string name="save">Save</string>
     <string name="apply">Apply</string>
     <string name="io_error">IO error (Another application using a headset? Is it connected?)</string>
+    <string name="io_error_hint">IO error (Another application using a headset? Is it connected?)</string>
     <string name="headset_not_found">Sony Headset is not found</string>
     <string name="ok">OK</string>
+    <string name="timeout_error">Error: timeout</string>
+    <string name="interrupted_error">Error: interrupted</string>
 </resources>
