@@ -442,7 +442,7 @@ public class TaskerPlugin {
                 if (
                         ( timeoutMS > REQUESTED_TIMEOUT_MS_MAX ) &&
                                 ( timeoutMS != REQUESTED_TIMEOUT_MS_NEVER )
-                        ) {
+                ) {
                     Log.w( TAG, "requestTimeoutMS: requested timeout " + timeoutMS + " exceeds maximum, setting to max (" + REQUESTED_TIMEOUT_MS_MAX + ")" );
                     timeoutMS = REQUESTED_TIMEOUT_MS_MAX;
                 }

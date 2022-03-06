@@ -74,16 +74,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String blurb = "";
 
         if (((RadioButton) findViewById(R.id.radioButtonDisable)).isChecked()) {
-            mode = 0;
+            mode = TaskerFireReceiver.KEY_OFF;
             blurb = ((RadioButton) findViewById(R.id.radioButtonDisable)).getText().toString();
         } else if (((RadioButton) findViewById(R.id.radioButtonNoiseCancelling)).isChecked()) {
-            mode = 1;
+            mode = TaskerFireReceiver.KEY_NOISE_CANCELLING;
             blurb = ((RadioButton) findViewById(R.id.radioButtonNoiseCancelling)).getText().toString();
         } else if (((RadioButton) findViewById(R.id.radioButtonWindCancelling)).isChecked()) {
-            mode = 2;
+            mode = TaskerFireReceiver.KEY_WIND_CANCELLING;
             blurb = ((RadioButton) findViewById(R.id.radioButtonWindCancelling)).getText().toString();
         } else if (((RadioButton) findViewById(R.id.radioButtonAmbientSound)).isChecked()) {
-            mode = 3;
+            mode = TaskerFireReceiver.KEY_AMBIENT_SOUND;
             volume = ((SeekBar) findViewById(R.id.seekBarVolume)).getProgress() + 1;
             voice = ((Switch) findViewById(R.id.switchVoiceOptimized)).isChecked();
             blurb = ((RadioButton) findViewById(R.id.radioButtonAmbientSound)).getText().toString() +

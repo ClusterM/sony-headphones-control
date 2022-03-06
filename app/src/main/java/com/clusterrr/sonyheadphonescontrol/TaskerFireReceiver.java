@@ -165,7 +165,7 @@ public final class TaskerFireReceiver extends BroadcastReceiver {
             throws IOException, InterruptedException, TimeoutException {
         return findByUUIDAndSend(context, HEADSET_UUIDS, COMMAND_SET_MODE,
                 new byte[]{0x68, 0x02,
-                (byte) (enabled ? 0x10 : 0x00), 0x02, (byte) (noiseCancelling), 0x01,
+                (byte) (enabled ? 0x10 : 0x00), 0x02, (byte) noiseCancelling, 0x01,
                 (byte) (voice ? 1 : 0), (byte) volume});
     }
 
